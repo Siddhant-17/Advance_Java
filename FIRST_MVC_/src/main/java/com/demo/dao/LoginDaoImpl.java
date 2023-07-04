@@ -15,12 +15,13 @@ public class LoginDaoImpl implements LoginDao {
 
 	public MyUser validate(String uname, String pass) {
 	try {
-		return jdbctemplate.queryForObject("select * from myuser where uname=? and pass=?", new Object[] {uname,pass},
+		return jdbctemplate.queryForObject("select * from user where uname=? and password=?", new Object[] {uname,pass},
 		BeanPropertyRowMapper.newInstance(MyUser.class));
 	}
 	catch(Exception e)
 	{
 		System.out.println("not found");
+		System.out.println(e);
 	}
 	return null;
 	}

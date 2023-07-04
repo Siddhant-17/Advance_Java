@@ -25,8 +25,8 @@ public class LoginController {
 		MyUser m1=loginservice.validateUser(uname,pass);
 		if(m1!=null) {
 		session.setAttribute("user", m1);
-		String msg="hello";
-		return new ModelAndView("Hello","msg","success");
+		
+		return new ModelAndView("redirect:/product/viewProduct");
 		}
 		else 
 		{
