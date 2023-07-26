@@ -17,7 +17,7 @@ public class TestConnection {
 				//step 2:Connect to database
 				String url="jdbc:mysql://192.168.10.150:3306/dac41";
 				Connection con=DriverManager.getConnection(url,"dac43","welcome");
-					//create connection object and connect to the database
+					// connect to the database
 				if(con!=null)
 					System.out.println("connected");
 				else
